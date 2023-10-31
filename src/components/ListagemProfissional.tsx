@@ -1,11 +1,11 @@
 import React, { Component, useState, ChangeEvent, FormEvent, useEffect } from 'react';
 import styles from "../App.module.css";
-import { CadastroClientesInterface } from '../interfaces/CadastroClientesInterface';
+import { CadastroProfissionalInterface } from '../interfaces/CadastroProfissionalInterface';
 import axios from 'axios';
 
-const Listagem = () => {
+const ListagemProfissional = () => {
 
-    const [usuarios, setUsuarios] = useState<CadastroClientesInterface[]>([]);
+    const [usuarios, setUsuarios] = useState<CadastroProfissionalInterface[]>([]);
     const [pesquisa, setPesquisa] = useState<string>('');
     const [error, setError] = useState("");
 
@@ -22,7 +22,7 @@ const Listagem = () => {
         async function fetchData() {
             try {
 
-                const response = await axios.post('http://127.0.0.1:8000/api/cliente/nome',
+                const response = await axios.post('http://127.0.0.1:8000/api/profissional/nome',
                     { nome: pesquisa },
                     {
                         headers: {
@@ -50,7 +50,7 @@ const Listagem = () => {
     useEffect(() => {
         async function fetchData() {
             try {
-                const response = await axios.get('http://127.0.0.1:8000/api/cliente/all');
+                const response = await axios.get('http://127.0.0.1:8000/api/profissional/all');
                 setUsuarios(response.data.data);
 
             } catch (error) {
@@ -106,6 +106,7 @@ const Listagem = () => {
                                         <th>cep</th>
                                         <th>complemento</th>
                                         <th>senha</th>
+                                        <th>salario</th>
                                         
                                     </tr>
                                 </thead>
@@ -127,6 +128,7 @@ const Listagem = () => {
                                             <td>{usuario.cep}</td>
                                             <td>{usuario.complemento}</td>
                                             <td>{usuario.senha}</td>
+                                            <td>{usuario.salario}</td>
                                            
                                            
                                             <td>
@@ -147,4 +149,4 @@ const Listagem = () => {
     );
 }
 
-export default Listagem;
+export default ListagemProfissional;

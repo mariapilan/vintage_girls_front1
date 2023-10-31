@@ -1,11 +1,11 @@
 import React, { Component, useState, ChangeEvent, FormEvent, useEffect } from 'react';
 import styles from "../App.module.css";
-import { CadastroClientesInterface } from '../interfaces/CadastroClientesInterface';
 import axios from 'axios';
+import { ServicoInterface } from '../interfaces/ServicoInterface';
 
-const Listagem = () => {
+const ListagemServico = () => {
 
-    const [usuarios, setUsuarios] = useState<CadastroClientesInterface[]>([]);
+    const [usuarios, setUsuarios] = useState<ServicoInterface[]>([]);
     const [pesquisa, setPesquisa] = useState<string>('');
     const [error, setError] = useState("");
 
@@ -22,7 +22,7 @@ const Listagem = () => {
         async function fetchData() {
             try {
 
-                const response = await axios.post('http://127.0.0.1:8000/api/cliente/nome',
+                const response = await axios.post('http://127.0.0.1:8000/api/servico/nome',
                     { nome: pesquisa },
                     {
                         headers: {
@@ -50,7 +50,7 @@ const Listagem = () => {
     useEffect(() => {
         async function fetchData() {
             try {
-                const response = await axios.get('http://127.0.0.1:8000/api/cliente/all');
+                const response = await axios.get('http://127.0.0.1:8000/api/servico/all');
                 setUsuarios(response.data.data);
 
             } catch (error) {
@@ -86,26 +86,17 @@ const Listagem = () => {
                     <div className='card'>
                         <div className='card-body'>
                             <h5 className='card-title'>
-                                Listagem de Usuários
+                                Listagem de Servicos
                             </h5>
                             <table className='table table-hover'>
                                 <thead>
                                     <tr>
                                         <th>ID</th>
                                         <th>Nome</th>
-                                        <th>Celular</th>
-                                        <th>E-mail</th>
-                                        <th>CPF</th>
-                                        <th>dataNascimento</th>
-                                        <th>cidade</th>
-                                        <th>estado</th>
-                                        <th>pais</th>
-                                        <th>rua</th>
-                                        <th>numero</th>
-                                        <th>bairro</th>
-                                        <th>cep</th>
-                                        <th>complemento</th>
-                                        <th>senha</th>
+                                        <th>Descricao</th>
+                                        <th>Duracao</th>
+                                        <th>Preco</th>
+                                        
                                         
                                     </tr>
                                 </thead>
@@ -114,19 +105,10 @@ const Listagem = () => {
                                         <tr key={usuario.id}>
                                             <td>{usuario.id}</td>
                                             <td>{usuario.nome}</td>
-                                            <td>{usuario.celular}</td>
-                                            <td>{usuario.email}</td>
-                                            <td>{usuario.cpf}</td>
-                                            <td>{usuario.dataNascimento}</td>
-                                            <td>{usuario.cidade}</td>
-                                            <td>{usuario.estado}</td>
-                                            <td>{usuario.pais}</td>
-                                            <td>{usuario.rua}</td>
-                                            <td>{usuario.numero}</td>
-                                            <td>{usuario.bairro}</td>
-                                            <td>{usuario.cep}</td>
-                                            <td>{usuario.complemento}</td>
-                                            <td>{usuario.senha}</td>
+                                            <td>{usuario.descricao}</td>
+                                            <td>{usuario.duracao}</td>
+                                            <td>{usuario.preco}</td>
+                                           
                                            
                                            
                                             <td>
@@ -147,4 +129,4 @@ const Listagem = () => {
     );
 }
 
-export default Listagem;
+export default ListagemServico;
