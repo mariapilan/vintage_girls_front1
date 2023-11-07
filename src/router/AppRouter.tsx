@@ -11,6 +11,9 @@ import CadastroProfissional from "../components/CadastroProfissional";
 import ListagemProfissional from "../components/ListagemProfissional";
 import CadastroServico from "../components/CadastroServico";
 import ListagemServico from "../components/ListagemServico";
+import EditarCliente from "../components/EditarCliente";
+import EditarProfissional from "../components/EditarProfissional";
+import EditarServico from "../components/EditarServico";
 const AppRouter = () => {
     return (
         <BrowserRouter>
@@ -32,6 +35,15 @@ const AppRouter = () => {
 
                 <Route path="listagemservico"
                     element={<ListagemServico />} />
+
+                <Route path="/editarcliente/:id"
+                    element={<EditarCliente />} />
+
+                <Route path="/editarprofissional/:id"
+                    element={<EditarProfissional />} />
+
+                <Route path="/editarservico/:id"
+                    element={<EditarServico />} />
 
             </Routes>
         </BrowserRouter>

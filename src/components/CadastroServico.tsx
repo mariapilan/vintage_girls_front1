@@ -65,6 +65,7 @@ const CadastroServico = () => {
             setPreco(e.target.value);
 
         }
+    }
 
         return (
             <div>
@@ -117,10 +118,6 @@ const CadastroServico = () => {
 
                             ></input>
                         </div>
-
-
-                        
-
                         <div className='col-12'>
                             <button
                                 type='submit'
@@ -131,7 +128,6 @@ const CadastroServico = () => {
                 <Footer />
             </div>
         );
-    }
 }
 
 export default CadastroServico;
