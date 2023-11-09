@@ -1,46 +1,46 @@
-# Getting Started with Create React App
+# Vintage_girls|_front1 com Front-Enf e react
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto contém uma série de exercícios práticos para trabalhar com API e retorno dos dados no formato JSON usando a linguagem PHP e o framework Laravel.
 
-## Available Scripts
+## Requisitos
 
-In the project directory, you can run:
+Certifique-se de ter os seguintes requisitos atendidos antes de começar a trabalhar nos exercícios:
 
-### `npm start`
+- 7-Zip instalado
+- Git instalado
+- Editor de código de sua preferência
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Como utilizar este repositório
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Clone este repositório para o seu ambiente de desenvolvimento local utilizando o comando:
+```
+ git clone https://github.com/mariapilan/vintage_girls_front1.git
+```
+2. Acesse o diretório do projeto:
+```
+cd vintage_girls_front1
+```
+3. Instalar o NPM
+```
+npm install
+```
+4. Start NPM
+```
+npm start
+```
+5. Acessar o Visual Studio Code
+```
+code .
+```
 
-### `npm test`
+## Licença
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Este projeto está licenciado sob a [MIT License](LICENSE), o que significa que você pode utilizá-lo livremente para fins educacionais, comerciais ou pessoais.
 
-### `npm run build`
+## Contato
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Em caso de dúvidas, sugestões ou problemas, sinta-se à vontade para entrar em contato através do email: seu_email@example.com.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Aviso**: Certifique-se de substituir "seu_usuario" no link de clonagem e "seu_email@example.com" na seção de contato pelos valores correspondentes do seu próprio usuário do GitHub e endereço de e-mail.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Este é apenas um modelo básico de README.md, você pode adaptar e melhorar conforme suas necessidades específicas de projeto. Certifique-se de incluir informações importantes sobre como configurar, executar e testar os exercícios, bem como qualquer outra documentação relevante para tornar o repositório mais amigável e útil para outros desenvolvedores.
