@@ -58,7 +58,7 @@ const CadastroProfissional = () => {
             }).then(function(response){
                 console.log("Entrou")
                 console.log(response);
-                //window.location.href = "/listagemprofissional"
+                window.location.href = "/listagemprofissional"
             }).catch(function(error){
                 console.log(error);
             })

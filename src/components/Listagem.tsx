@@ -63,6 +63,21 @@ const Listagem = () => {
         fetchData();
     }, []);
 
+    const excluir = (id: number) =>{
+        axios.delete('http://127.0.0.1:8000/api/cliente/remover/' +id)
+        async function fetchData() {
+            try {
+                const response = await axios.get('http://127.0.0.1:8000/api/cliente/all');
+                setUsuarios(response.data.data);
+
+            } catch (error) {
+                setError("Ocorreu um erro");
+                console.log(error);
+            }
+        }
+
+        fetchData();
+    }
 
     return (
         <div>
@@ -87,7 +102,7 @@ const Listagem = () => {
                     <div className='card'>
                         <div className='card-body'>
                             <h5 className='card-title'>
-                                Listagem de Usuários
+                                Listagem de Clientes
                             </h5>
                             <table className='table table-hover'>
                                 <thead>
@@ -132,7 +147,7 @@ const Listagem = () => {
                                            
                                             <td>
                                                 <Link to={"/editarcliente/" + usuario.id } className='btn btn-primary btn-sm'>Editar</Link>
-                                                <a href="#" className='btn btn-danger btn-sm'>Excluir</a>
+                                                <button onClick={() => excluir(usuario.id)} className='btn btn-danger btn-sm'>Excluir</button>
                                             </td>
                                         </tr>
                                     ))}
