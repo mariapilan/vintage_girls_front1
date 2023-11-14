@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const ListagemServico = () => {
 
-    const [usuarios, setUsuarios] = useState<ServicoInterface[]>([]);
+    const [servicos, setUsuarios] = useState<ServicoInterface[]>([]);
     const [pesquisa, setPesquisa] = useState<string>('');
     const [error, setError] = useState("");
 
@@ -118,19 +118,19 @@ const ListagemServico = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {usuarios.map(usuario => (
-                                        <tr key={usuario.id}>
-                                            <td>{usuario.id}</td>
-                                            <td>{usuario.nome}</td>
-                                            <td>{usuario.descricao}</td>
-                                            <td>{usuario.duracao}</td>
-                                            <td>{usuario.preco}</td>
+                                    {servicos.map(servico => (
+                                        <tr key={servico.id}>
+                                            <td>{servico.id}</td>
+                                            <td>{servico.nome}</td>
+                                            <td>{servico.descricao}</td>
+                                            <td>{servico.duracao}</td>
+                                            <td>{servico.preco}</td>
                                            
                                            
                                            
                                             <td>
-                                                <Link to={"/editarservico/" + usuario.id } className='btn btn-primary btn-sm'>Editar</Link>
-                                                <button onClick={() => excluir(usuario.id)} className='btn btn-danger btn-sm'>Excluir</button>
+                                                <Link to={"/editarservico/" + servico.id } className='btn btn-primary btn-sm'>Editar</Link>
+                                                <button onClick={() => excluir(servico.id)} className='btn btn-danger btn-sm'>Excluir</button>
                                             </td>
                                         </tr>
                                     ))}

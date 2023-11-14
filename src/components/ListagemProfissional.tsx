@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const ListagemProfissional = () => {
 
-    const [usuarios, setUsuarios] = useState<CadastroProfissionalInterface[]>([]);
+    const [profissionals, setprofissionals] = useState<CadastroProfissionalInterface[]>([]);
     const [pesquisa, setPesquisa] = useState<string>('');
     const [error, setError] = useState("");
 
@@ -33,7 +33,7 @@ const ListagemProfissional = () => {
                         }
 
                     }).then(function (response) {
-                        setUsuarios(response.data.data);
+                        setprofissionals(response.data.data);
                     }).catch(function (error) {
                         console.log(error);
 
@@ -52,7 +52,7 @@ const ListagemProfissional = () => {
         async function fetchData() {
             try {
                 const response = await axios.get('http://127.0.0.1:8000/api/profissional/all');
-                setUsuarios(response.data.data);
+                setprofissionals(response.data.data);
 
             } catch (error) {
                 setError("Ocorreu um erro");
@@ -67,7 +67,7 @@ const ListagemProfissional = () => {
         async function fetchData() {
             try {
                 const response = await axios.get('http://127.0.0.1:8000/api/profissional/all');
-                setUsuarios(response.data.data);
+                setprofissionals(response.data.data);
 
             } catch (error) {
                 setError("Ocorreu um erro");
@@ -126,29 +126,29 @@ const ListagemProfissional = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {usuarios.map(usuario => (
-                                        <tr key={usuario.id}>
-                                            <td>{usuario.id}</td>
-                                            <td>{usuario.nome}</td>
-                                            <td>{usuario.celular}</td>
-                                            <td>{usuario.email}</td>
-                                            <td>{usuario.cpf}</td>
-                                            <td>{usuario.dataNascimento}</td>
-                                            <td>{usuario.cidade}</td>
-                                            <td>{usuario.estado}</td>
-                                            <td>{usuario.pais}</td>
-                                            <td>{usuario.rua}</td>
-                                            <td>{usuario.numero}</td>
-                                            <td>{usuario.bairro}</td>
-                                            <td>{usuario.cep}</td>
-                                            <td>{usuario.complemento}</td>
-                                            <td>{usuario.senha}</td>
-                                            <td>{usuario.salario}</td>
+                                    {profissionals.map(profissional => (
+                                        <tr key={profissional.id}>
+                                            <td>{profissional.id}</td>
+                                            <td>{profissional.nome}</td>
+                                            <td>{profissional.celular}</td>
+                                            <td>{profissional.email}</td>
+                                            <td>{profissional.cpf}</td>
+                                            <td>{profissional.dataNascimento}</td>
+                                            <td>{profissional.cidade}</td>
+                                            <td>{profissional.estado}</td>
+                                            <td>{profissional.pais}</td>
+                                            <td>{profissional.rua}</td>
+                                            <td>{profissional.numero}</td>
+                                            <td>{profissional.bairro}</td>
+                                            <td>{profissional.cep}</td>
+                                            <td>{profissional.complemento}</td>
+                                            <td>{profissional.senha}</td>
+                                            <td>{profissional.salario}</td>
                                            
                                            
                                             <td>
-                                                <Link to={"/editarprofissional/" + usuario.id } className='btn btn-primary btn-sm'>Editar</Link>
-                                                <button onClick={() => excluir(usuario.id)} className='btn btn-danger btn-sm'>Excluir</button>
+                                                <Link to={"/editarprofissional/" + profissional.id } className='btn btn-primary btn-sm'>Editar</Link>
+                                                <button onClick={() => excluir(profissional.id)} className='btn btn-danger btn-sm'>Excluir</button>
                                             </td>
                                         </tr>
                                     ))}
