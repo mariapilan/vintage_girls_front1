@@ -7,7 +7,7 @@ import Footer from './Footer';
 import styles from '../App.module.css';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-
+import '../components/estilo.css';
 
 const EditarCliente = () => {
     const [id, setId] = useState<number>();
@@ -92,6 +92,7 @@ const EditarCliente = () => {
                 console.log(error)
             }
         }
+        
 
 
         fetchData();
@@ -307,11 +308,12 @@ const EditarCliente = () => {
                         ></input>
                     </div>
 
-                    <div className='col-12'>
-                        <button
-                            type='submit'
-                            className='btn btn-success btn-sm'>Atualizar</button>
-                    </div>
+                    <div className='col-15'>
+                                    <button className='btt' type='submit'> Atualizar
+                                    </button>
+                                </div>
+                
+                    
                 </form>
             </main>
             <Footer />

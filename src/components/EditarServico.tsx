@@ -138,11 +138,11 @@ const EditarServico = () => {
                         ></input>
                     </div>
 
-                    <div className='col-12'>
-                        <button
-                            type='submit'
-                            className='btn btn-success btn-sm'>Atualizar</button>
-                    </div>
+                    <div className='col-15'>
+                                    <button className='btt' type='submit'> Atualizar
+                                    </button>
+                                </div>
+
                 </form>
             </main>
             <Footer />

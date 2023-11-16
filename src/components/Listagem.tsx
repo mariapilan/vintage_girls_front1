@@ -76,6 +76,8 @@ const Listagem = () => {
             }
         }
 
+    
+
         fetchData();
     }
 
@@ -83,16 +85,16 @@ const Listagem = () => {
         <div>
             <main className={styles.main}>
                 <div className='container'>
-                    <div className='col-md mb-3'>
+                    <div className='col-md mb-5'>
                         <div className='card'>
                             <div className='card-boy'>
-                                <h5 className='card-title'>Pesquisar</h5>
+                                <h2 className='card-title'>Pesquisar</h2>
                                 <form onSubmit={buscar} className='row'>
-                                    <div className='col-10'>
+                                    <div className='col-6'>
                                         <input type="text" name="pesquisa" className='form-control' onChange={handleState} />
                                     </div>
                                     <div className='col-1'>
-                                        <button type='submit' className='btn btn-success'>Pesquisar</button>
+                                        <button type='submit' className='btn btn-black btn-sm'>Pesquisar</button>
                                     </div>
                                 </form>
                             </div>
@@ -101,9 +103,9 @@ const Listagem = () => {
 
                     <div className='card'>
                         <div className='card-body'>
-                            <h5 className='card-title'>
+                            <h4 className='card-title'>
                                 Listagem de Clientes
-                            </h5>
+                            </h4>
                             <table className='table table-hover'>
                                 <thead>
                                     <tr>
@@ -120,8 +122,9 @@ const Listagem = () => {
                                         <th>numero</th>
                                         <th>bairro</th>
                                         <th>cep</th>
-                                        <th>complemento</th>
-                                        <th>senha</th>
+                                        <th>Ações</th>
+                    
+                                        
                                         
                                     </tr>
                                 </thead>
@@ -141,13 +144,22 @@ const Listagem = () => {
                                             <td>{usuario.numero}</td>
                                             <td>{usuario.bairro}</td>
                                             <td>{usuario.cep}</td>
-                                            <td>{usuario.complemento}</td>
-                                            <td>{usuario.senha}</td>
+                                            
+                                            
+                                            
                                            
                                            
-                                            <td>
-                                                <Link to={"/editarcliente/" + usuario.id } className='btn btn-primary btn-sm'>Editar</Link>
-                                                <button onClick={() => excluir(usuario.id)} className='btn btn-danger btn-sm'>Excluir</button>
+                                            <td className='d-grid gap-1 col-4 '>
+                                            <div className='col-1'>
+                                                <Link to={"/editarcliente/" + usuario.id } className='btt btn-black btn-sm'>Editar</Link>
+                                               </div>
+                                               <div className='col-1'>
+                                                <button onClick={() => excluir(usuario.id)} className='btt btn-white btn-sm'>Excluir</button>
+                                                </div>
+                                                <div className='col-15'>
+                                                <Link to={"/senhacliente/" + usuario.id } className='btt btn-black btn-sm'>Recuperar senha</Link>
+                                   
+                                </div>
                                             </td>
                                         </tr>
                                     ))}

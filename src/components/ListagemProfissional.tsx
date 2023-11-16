@@ -82,7 +82,7 @@ const ListagemProfissional = () => {
         <div>
             <main className={styles.main}>
                 <div className='container'>
-                    <div className='col-md mb-3'>
+                    <div className='col-md mb-2'>
                         <div className='card'>
                             <div className='card-boy'>
                                 <h5 className='card-title'>Pesquisar</h5>
@@ -91,7 +91,7 @@ const ListagemProfissional = () => {
                                         <input type="text" name="pesquisa" className='form-control' onChange={handleState} />
                                     </div>
                                     <div className='col-1'>
-                                        <button type='submit' className='btn btn-success'>Pesquisar</button>
+                                        <button type='submit' className='btt btn-success'>Pesquisar</button>
                                     </div>
                                 </form>
                             </div>
@@ -100,9 +100,9 @@ const ListagemProfissional = () => {
 
                     <div className='card'>
                         <div className='card-body'>
-                            <h5 className='card-title'>
+                            <h4 className='card-title'>
                                 Listagem de Profissionais
-                            </h5>
+                            </h4>
                             <table className='table table-hover'>
                                 <thead>
                                     <tr>
@@ -119,9 +119,8 @@ const ListagemProfissional = () => {
                                         <th>numero</th>
                                         <th>bairro</th>
                                         <th>cep</th>
-                                        <th>complemento</th>
-                                        <th>senha</th>
                                         <th>salario</th>
+                                        <th>Ações</th>
                                         
                                     </tr>
                                 </thead>
@@ -141,14 +140,17 @@ const ListagemProfissional = () => {
                                             <td>{profissional.numero}</td>
                                             <td>{profissional.bairro}</td>
                                             <td>{profissional.cep}</td>
-                                            <td>{profissional.complemento}</td>
-                                            <td>{profissional.senha}</td>
                                             <td>{profissional.salario}</td>
                                            
                                            
-                                            <td>
-                                                <Link to={"/editarprofissional/" + profissional.id } className='btn btn-primary btn-sm'>Editar</Link>
-                                                <button onClick={() => excluir(profissional.id)} className='btn btn-danger btn-sm'>Excluir</button>
+                                           
+                                            <td className='d-grid gap-1 col-4 '>
+                                            <div className='col-1'>
+                                                <Link to={"/editarprofissional/" + profissional.id } className='btt btn-primary btn-sm'>Editar</Link>
+                                                </div>
+                                               <div className='col-1'>
+                                                <button onClick={() => excluir(profissional.id)} className='btt btn-white btn-sm'>Excluir</button>
+                                                </div>
                                             </td>
                                         </tr>
                                     ))}

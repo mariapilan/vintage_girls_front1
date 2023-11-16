@@ -84,7 +84,7 @@ const ListagemServico = () => {
         <div>
             <main className={styles.main}>
                 <div className='container'>
-                    <div className='col-md mb-3'>
+                    <div className='col-md mb-2'>
                         <div className='card'>
                             <div className='card-boy'>
                                 <h5 className='card-title'>Pesquisar</h5>
@@ -93,7 +93,7 @@ const ListagemServico = () => {
                                         <input type="text" name="pesquisa" className='form-control' onChange={handleState} />
                                     </div>
                                     <div className='col-1'>
-                                        <button type='submit' className='btn btn-success'>Pesquisar</button>
+                                        <button type='submit' className='btt btn-success'>Pesquisar</button>
                                     </div>
                                 </form>
                             </div>
@@ -102,9 +102,9 @@ const ListagemServico = () => {
 
                     <div className='card'>
                         <div className='card-body'>
-                            <h5 className='card-title'>
+                            <h4 className='card-title'>
                                 Listagem de Servicos
-                            </h5>
+                            </h4>
                             <table className='table table-hover'>
                                 <thead>
                                     <tr>
@@ -113,6 +113,7 @@ const ListagemServico = () => {
                                         <th>Descricao</th>
                                         <th>Duracao</th>
                                         <th>Preco</th>
+                                        <th>Ações</th>
                                         
                                         
                                     </tr>
@@ -129,8 +130,8 @@ const ListagemServico = () => {
                                            
                                            
                                             <td>
-                                                <Link to={"/editarservico/" + servico.id } className='btn btn-primary btn-sm'>Editar</Link>
-                                                <button onClick={() => excluir(servico.id)} className='btn btn-danger btn-sm'>Excluir</button>
+                                                <Link to={"/editarservico/" + servico.id } className='btt btn-primary btn-sm'>Editar</Link>
+                                                <button onClick={() => excluir(servico.id)} className='btt btn-danger btn-sm'>Excluir</button>
                                             </td>
                                         </tr>
                                     ))}
