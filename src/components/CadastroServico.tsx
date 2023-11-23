@@ -65,6 +65,9 @@ const CadastroServico = () => {
             setPreco(e.target.value);
 
         }
+        
+          
+
     }
 
         return (

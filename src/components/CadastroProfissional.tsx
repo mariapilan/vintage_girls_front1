@@ -114,6 +114,22 @@ const CadastroProfissional = () => {
         if (e.target.name === "salario") {
             setSalario(e.target.value);
         }
+        const findCep = (e: FormEvent) => {
+            e.preventDefault();
+        
+            fetch('https://viacep.com.br/ws/' + cep + '/json/', {
+                method: 'GET'
+            }).then(response => response.json())
+                .then(
+                    data => {
+                        setCidade(data.localidade);
+        
+                        setEstado(data.uf);
+        
+                    }
+                ).catch(error => { console.log("Pesquisa Inválida") });
+        
+        }
     }
 
     return (
