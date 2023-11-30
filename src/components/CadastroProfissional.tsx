@@ -186,7 +186,7 @@ const CadastroProfissional = () => {
 
                     <div className='col-6'>
                         <label htmlFor='dataNascimento' className='form-label'>Data de Nascimento</label>
-                        <input type='text'
+                        <input type='date'
                             name='dataNascimento'
                             className='form-control'
                             required

@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, {Component, useState, ChangeEvent, FormEvent,useEffect} from 'react';
-import styles from "../router/App.module.css";
+import styles from "../App.module.css";
 import { AgendaClienteInterfaces } from '../interfaces/AgendaClienteInterface';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -83,7 +83,7 @@ const AgendaClienteListagem = () => {
                     <div className='col-md mb-3'>
                         <div className='card'>
                             <div className='card-body'>
-                                <h5 className='card-title'>ℙ𝕖𝕤𝕢𝕦𝕚𝕤𝕒𝕣</h5>
+                                <h5 className='card-title'>𝓟𝓮𝓼𝓺𝓾𝓲𝓼𝓪𝓻</h5>
                                 <form onSubmit={buscar} className='row'>
                                     <div className='col-10'>
                                         <input type="text" name="pesquisa" className='form-control' onChange={handleState}/>
@@ -104,7 +104,7 @@ const AgendaClienteListagem = () => {
                     <div className='card'>
                         <div className='card-body'>
                             <h5 className='card-title'>
-                            𝑳𝒊𝒔𝒕𝒂𝒈𝒆𝒎 𝒅𝒆 Agendamentos
+                            𝓛𝓲𝓼𝓽𝓪𝓰𝓮𝓶 𝓭𝓮 𝓐𝓰𝓮𝓷𝓭𝓪𝓶𝓮𝓷𝓽𝓸𝓼
                             </h5>
                             <table className='table table-hover'>
                                 <thead>

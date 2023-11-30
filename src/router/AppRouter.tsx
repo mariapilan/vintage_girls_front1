@@ -18,6 +18,8 @@ import Cadastro from "../components/CadastroClientes";
 import AgendaClienteListagem from "../components/AgendaClienteListagem";
 import AgendaEditar from "../components/AgendaEditar";
 import CadastroAgenda from "../components/AgendaCliente";
+import MudaSenhaCliente from "../components/EditarSenhaCliente";
+import MudaSenhaProfissional from "../components/EditarSenhaProfissional";
 const AppRouter = () => {
     return (
         <BrowserRouter>
@@ -57,6 +59,13 @@ const AppRouter = () => {
 
                 <Route path="agenda/editar/:id" 
                 element={<AgendaEditar />} />
+
+                <Route path="recuperarsenha" 
+                element={<MudaSenhaCliente/>}/>
+
+                <Route path="/recuperarsenhaprofissional" 
+                element={<MudaSenhaProfissional/>}/>
+
 
 
             </Routes>

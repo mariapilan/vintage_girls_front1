@@ -87,7 +87,7 @@ const ListagemServico = () => {
                     <div className='col-md mb-2'>
                         <div className='card'>
                             <div className='card-boy'>
-                                <h5 className='card-title'>Pesquisar</h5>
+                                <h5 className='card-title'>𝓟𝓮𝓼𝓺𝓾𝓲𝓼𝓪𝓻</h5>
                                 <form onSubmit={buscar} className='row'>
                                     <div className='col-10'>
                                         <input type="text" name="pesquisa" className='form-control' onChange={handleState} />
@@ -103,7 +103,7 @@ const ListagemServico = () => {
                     <div className='card'>
                         <div className='card-body'>
                             <h4 className='card-title'>
-                                Listagem de Servicos
+                            𝓛𝓲𝓼𝓽𝓪𝓰𝓮𝓶 𝓭𝓮 𝓢𝓮𝓻𝓿𝓲ç𝓸
                             </h4>
                             <table className='table table-hover'>
                                 <thead>

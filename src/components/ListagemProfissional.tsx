@@ -85,7 +85,7 @@ const ListagemProfissional = () => {
                     <div className='col-md mb-2'>
                         <div className='card'>
                             <div className='card-boy'>
-                                <h5 className='card-title'>Pesquisar</h5>
+                                <h5 className='card-title'>𝓟𝓮𝓼𝓺𝓾𝓲𝓼𝓪𝓻</h5>
                                 <form onSubmit={buscar} className='row'>
                                     <div className='col-10'>
                                         <input type="text" name="pesquisa" className='form-control' onChange={handleState} />
@@ -101,7 +101,7 @@ const ListagemProfissional = () => {
                     <div className='card'>
                         <div className='card-body'>
                             <h4 className='card-title'>
-                                Listagem de Profissionais
+                            𝓛𝓲𝓼𝓽𝓪𝓰𝓮𝓶 𝓭𝓮 𝓟𝓻𝓸𝓯𝓲𝓼𝓼𝓲𝓸𝓷𝓪𝓲𝓼
                             </h4>
                             <table className='table table-hover'>
                                 <thead>
@@ -151,6 +151,10 @@ const ListagemProfissional = () => {
                                                <div className='col-1'>
                                                 <button onClick={() => excluir(profissional.id)} className='btt btn-white btn-sm'>Excluir</button>
                                                 </div>
+                                                <Link to={"/recuperarsenhaprofissional" } className='btt btn-black btn-sm'>Recuperar senha</Link>
+                                   
+                        
+                                                
                                             </td>
                                         </tr>
                                     ))}

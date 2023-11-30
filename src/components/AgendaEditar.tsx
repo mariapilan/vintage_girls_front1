@@ -4,7 +4,7 @@ import React, {
 } from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import styles from '../router/App.module.css';
+import styles from '../App.module.css';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Swal from 'sweetalert2';

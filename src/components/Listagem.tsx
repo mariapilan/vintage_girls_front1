@@ -91,16 +91,16 @@ const Listagem = () => {
         <div>
             <main className={styles.main}>
                 <div className='container'>
-                    <div className='col-md mb-5'>
+                    <div className='col-md mb-2'>
                         <div className='card'>
                             <div className='card-boy'>
-                                <h2 className='card-title'>Pesquisar</h2>
+                                <h5 className='card-title'>𝓟𝓮𝓼𝓺𝓾𝓲𝓼𝓪𝓻</h5>
                                 <form onSubmit={buscar} className='row'>
-                                    <div className='col-6'>
+                                    <div className='col-10'>
                                         <input type="text" name="pesquisa" className='form-control' onChange={handleState} />
                                     </div>
                                     <div className='col-1'>
-                                        <button type='submit' className='btn btn-black btn-sm'>Pesquisar</button>
+                                        <button type='submit' className='btt btn-success'>Pesquisar</button>
                                     </div>
                                 </form>
                             </div>
@@ -110,7 +110,7 @@ const Listagem = () => {
                     <div className='card'>
                         <div className='card-body'>
                             <h4 className='card-title'>
-                                Listagem de Clientes
+                            𝓛𝓲𝓼𝓽𝓪𝓰𝓮𝓶 𝓭𝓮 𝓒𝓵𝓲𝓮𝓷𝓽𝓮𝓼
                             </h4>
                             <table className='table table-hover'>
                                 <thead>
@@ -163,7 +163,7 @@ const Listagem = () => {
                                                 <button onClick={() => excluir(usuario.id)} className='btt btn-white btn-sm'>Excluir</button>
                                                 </div>
                                                 <div className='col-15'>
-                                                <Link to={"/senhacliente/" + usuario.id } className='btt btn-black btn-sm'>Recuperar senha</Link>
+                                                <Link to={"/recuperarsenha" } className='btt btn-black btn-sm'>Recuperar senha</Link>
                                    
                                 </div>
                                             </td>

@@ -1,7 +1,7 @@
 import React, { Component, useState, ChangeEvent, FormEvent, useEffect } from 'react';
 import Footer from './Footer';
 import Header from './Header';
-import styles from '../router/App.module.css';
+import styles from '../App.module.css';
 import axios from 'axios';
 import '../components/estilo.css';
 import Swal from 'sweetalert2';
