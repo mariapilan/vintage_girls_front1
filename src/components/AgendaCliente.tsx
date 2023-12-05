@@ -25,10 +25,7 @@ const CadastroAgenda = () => {
         const dados = {
             horario_data: horario_data,
             profissional_id: profissional_id,
-            tipo_pagamento: tipo_pagamento,
-            valor: valor,
-            cliente_id: cliente_id,
-            servico_id: servico_id
+        
         
         }
 
@@ -104,11 +101,6 @@ const CadastroAgenda = () => {
 
                                     </div>
 
-                                    <div className='col-6'>
-                                        <label htmlFor="cliente_id" className='form-label'>Cliente</label>
-                                        <input type="text" name='cliente_id' className='form-control' required onChange={handleState} />
-
-                                    </div>
 
         
 
@@ -118,24 +110,7 @@ const CadastroAgenda = () => {
 
                                     </div>
 
-                                    <div className='col-6'>
-                                        <label htmlFor="servico_id" className='form-label'>Serviço</label>
-                                        <input type="text" name='servico_id' className='form-control' required onChange={handleState} />
-
-                                    </div>
-
-                                    <div className='col-6'>
-                                        <label htmlFor="valor" className='form-label'>Valor</label>
-                                        <input type="text" name='valor' className='form-control' required onChange={handleState} />
-
-                                    </div>
-
-                                    <div className='col-6'>
-                                        <label htmlFor="tipo_pagamento" className='form-label'>Tipo De Pagamento</label>
-                                        <input type="text" name='tipo_pagamento' className='form-control' required onChange={handleState} />
-
-                                    </div>
-
+                                    
 
                                     
 

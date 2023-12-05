@@ -20,7 +20,7 @@ const CadastroServico = () => {
         e.preventDefault();
 
         const dados = {
-            id: id,
+            
             nome: nome,
             descricao: descricao,
             duracao: duracao,
@@ -35,7 +35,7 @@ const CadastroServico = () => {
                     "Content-Type": "application/json"
                 }
             }).then(function (response) {
-                console.log("Entrou")
+                
                 console.log(response);
                 window.location.href = "/listagemservico"
             }).catch(function (error) {
